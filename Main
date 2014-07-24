@@ -1,0 +1,33 @@
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EvenHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.FMLInitializationEvent;
+import cpw.mods.fml.common.FMLPostInitializationEvent;
+import cpw.mods.fml.common.FMLPreInitializationEvent;
+
+
+@Mod(modid="More armor mod", name="More armor mod", version="1.0.0")
+
+public class main{
+
+}
+   @Instance(value= "More_Armor_ModID")
+    public static More_Armor instance;
+   
+  @SidedProxy(clientSide="ClientProxy" serverSide="CommonProxy")
+   public static CommonProxy proxy;
+   
+   @EventHandler
+   pubic void preInit(FMLPreInitializationEvent event){
+   
+   }
+   
+   @EventHandler
+   public void Load(FMLLoadInitializationEvent event){
+         proxy.registerRenderers();
+   }
+   @EventHandler
+   public void PostInit(FMLPostInitializationEvent event){
+   
+   }
